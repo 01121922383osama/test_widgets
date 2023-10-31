@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:test_widgets/list_of_name_images.dart';
 
-class BodyChatPage extends StatelessWidget {
+import 'list_of_name_images.dart';
+
+class BodyChatPage extends StatefulWidget {
   const BodyChatPage({super.key});
 
   @override
+  State<BodyChatPage> createState() => _BodyChatPageState();
+}
+
+class _BodyChatPageState extends State<BodyChatPage> {
+  @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics:NeverScrollableScrollPhysics() ,
+      physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: names.length,
       itemBuilder: (context, index) {
